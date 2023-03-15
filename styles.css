@@ -18,7 +18,7 @@
   border: 1em solid red;
 }
 
-.grid-col {
+.grid-row {
   flex: auto;
 }
 

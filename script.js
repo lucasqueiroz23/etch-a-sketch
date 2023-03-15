@@ -1,25 +1,25 @@
-function createColumn(){
-  const column = document.createElement('div');
-  column.classList.add('grid-col');
-  column.classList.add('flex');
-  return column;
+function createRow(){
+  const row = document.createElement('div');
+  row.classList.add('grid-row');
+  row.classList.add('flex');
+  return row;
 }
 
-function createSquare(column){
+function createColumn(row){
   const square = document.createElement('div');
   square.classList.add('square');
-  column.appendChild(square);
+  row.appendChild(square);
 }
 
 function createGrid(){
   const grid = document.querySelector('.grid');
   for(let i = 0; i < 16; i++){
-    const column = createColumn();
+    const row = createRow();
     for(let j = 0; j < 16; j++){
-      createSquare(column);
+      createColumn(row);
     }
-    grid.appendChild(column);
+    grid.appendChild(row);
   }
 }
 
-createGrid()
+createGrid();
