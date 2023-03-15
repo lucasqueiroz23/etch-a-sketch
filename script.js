@@ -25,9 +25,15 @@ function createGrid(size){
 createGrid(16);
 
 function changeColor(e){
-  e.target.style.backgroundColor = 'blue';
+  e.target.style.backgroundColor = 'black';
+}
+
+function clearGrid(){
+  document.querySelectorAll('.square').forEach(square=>square.style.backgroundColor = 'white');
 }
 
 document.querySelectorAll('.square').forEach((square)=>{
   square.addEventListener('mouseover', changeColor);
 })
+
+document.querySelector('button').addEventListener('click', clearGrid);
