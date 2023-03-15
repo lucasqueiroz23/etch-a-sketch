@@ -11,6 +11,21 @@
   flex-direction: column;
 }
 
-.row {
-  flex-direction: row;
+
+.grid {
+  width: 50em;
+  height: 50em;
+  border: 1em solid red;
+}
+
+.grid-col {
+  flex: auto;
+}
+
+.square {
+  flex: auto;
+}
+
+.square:hover {
+  background-color: blue;
 }
