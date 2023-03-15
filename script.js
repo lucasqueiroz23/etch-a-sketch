@@ -11,18 +11,18 @@ function createColumn(row){
   row.appendChild(square);
 }
 
-function createGrid(){
+function createGrid(size){
   const grid = document.querySelector('.grid');
-  for(let i = 0; i < 16; i++){
+  for(let i = 0; i < size; i++){
     const row = createRow();
-    for(let j = 0; j < 16; j++){
+    for(let j = 0; j < size; j++){
       createColumn(row);
     }
     grid.appendChild(row);
   }
 }
 
-createGrid();
+createGrid(16);
 
 function changeColor(e){
   e.target.style.backgroundColor = 'blue';
