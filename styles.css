@@ -25,7 +25,3 @@
 .square {
   flex: auto;
 }
-
-.square:hover {
-  background-color: blue;
-}

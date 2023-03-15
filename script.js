@@ -23,3 +23,11 @@ function createGrid(){
 }
 
 createGrid();
+
+function changeColor(e){
+  e.target.style.backgroundColor = 'blue';
+}
+
+document.querySelectorAll('.square').forEach((square)=>{
+  square.addEventListener('mouseover', changeColor);
+})
