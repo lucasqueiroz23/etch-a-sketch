@@ -28,20 +28,14 @@ function createGrid(size){
   
 }
 
-createGrid(100)
-
 function changeColor(e){
-  
+
   e.target.style.backgroundColor = 'black';
 }
 
 function clearGrid(){
   document.querySelectorAll('.square').forEach(square=>square.style.backgroundColor = 'white');
 }
-
-document.querySelectorAll('.square').forEach((square)=>{
-  square.addEventListener('mouseover', changeColor);
-})
 
 function removeAllRows(){
   while(grid.firstChild){
@@ -60,6 +54,11 @@ function changeGridSize(e){
   createGrid(e.target.value);
 }
 
+document.querySelectorAll('.square').forEach((square)=>{
+  square.addEventListener('mouseover', changeColor);
+})
 document.querySelector('input').addEventListener('input', updateGridSizeLabel);
 document.querySelector('input').addEventListener('mouseup', changeGridSize);
 document.querySelector('button').addEventListener('click', clearGrid);
+
+createGrid(16);
