@@ -29,7 +29,6 @@ function createGrid(size){
 }
 
 function changeColor(e){
-
   e.target.style.backgroundColor = 'black';
 }
 
@@ -62,3 +61,19 @@ document.querySelector('input').addEventListener('mouseup', changeGridSize);
 document.querySelector('button').addEventListener('click', clearGrid);
 
 createGrid(16);
+
+function createFooter(){
+  const footerDiv = document.createElement('div');
+  footerDiv.classList.add('footer');
+  const footer = document.createElement('footer');
+  const anchor = document.createElement('a');
+  anchor.setAttribute('href', 'https://github.com/lucasqueiroz23');
+  anchor.setAttribute('target', '_blank');
+  anchor.textContent = 'Lucas Queiroz'
+  footer.textContent = 'Made by ';
+  footer.appendChild(anchor);
+  footerDiv.appendChild(footer);
+  document.body.appendChild(footerDiv);
+}
+
+createFooter();

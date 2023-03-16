@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background-color: lightgreen;
+}
+
 .flex {
   display: flex;
 }
@@ -11,11 +15,32 @@
   flex-direction: column;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.header {
+  font-size: 6rem;
+  text-align: center;
+  background-color: #89cff0;
+  color: #0072bb
+}
+
+.gap {
+  gap: 3em;
+}
 
 .grid {
-  width: 50em;
-  height: 50em;
-  border: 1em solid red;
+  background-color: white;
+  width: 40em;
+  height: 40em;
+  border: 3em solid red;
+  border-radius: 1em;
+  align-self: center;
 }
 
 .grid-row {
@@ -23,9 +48,39 @@
 }
 
 .square {
-  flex: auto;
+  flex: auto; 
 }
 
 button{
-  font-size: 5em; 
+  font-size: 4em;
+  background-color: blue;
+  border-radius: .5em;
+  color: white;
+  border-style: none;
+  padding: .2em; 
+}
+
+input[type="range"]{
+  height: 100%;
+  appearance: slider-vertical;
+}
+
+label {
+  font-size: 2em;
+}
+
+.footer {
+  font-size: 3em;
+  background-color: white;
+  padding: .5em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
 }
