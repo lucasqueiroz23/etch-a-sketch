@@ -78,6 +78,18 @@ button{
   cursor: pointer;
 }
 
+.animate {
+  transition-property: all;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+
+.animate:hover {
+  transform: scale(120%,120%);
+  background-color: #880101;
+  color: white;
+}
+
 input[type="range"]{
   height: 100%;
   appearance: slider-vertical;
