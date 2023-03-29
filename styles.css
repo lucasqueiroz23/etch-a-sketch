@@ -75,6 +75,7 @@ button{
   border-style: none;
   padding: .2em; 
   font-family: var(--main-font-family, sans-serif);
+  cursor: pointer;
 }
 
 input[type="range"]{
