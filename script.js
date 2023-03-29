@@ -63,6 +63,7 @@ document.querySelector('button').addEventListener('click', clearGrid);
 createGrid(16);
 
 function createCopyRight(){
+  const footer = document.createElement('footer');
   const reference = document.createElement('div');
   const anchor = document.createElement('a');
   anchor.setAttribute('href', 'https://github.com/lucasqueiroz23');
@@ -70,7 +71,8 @@ function createCopyRight(){
   anchor.textContent = 'Lucas Queiroz'
   reference.textContent = 'Made by ';
   reference.appendChild(anchor);
-  document.querySelector('.header').appendChild(reference);
+  footer.appendChild(reference);
+  document.querySelector('body').appendChild(footer);
 }
 
 createCopyRight();

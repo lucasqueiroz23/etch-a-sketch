@@ -1,10 +1,25 @@
+@font-face {
+  font-family: 'shortstack';
+  src: url('./fonts/ShortStack-Regular.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
+:root {
+  --primary: #ff0400;
+  --secondary: #3631CF; 
+  --main-bg-color: #27D8D6;
+  --btn-color: #593CF6;
+  --main-font-size: 4rem;
+  --main-font-family: 'shortstack';
+}
+
 body {
-  background-color: lightgreen;
+  background-color: var(--main-bg-color);
+  font-family: var(--main-font-family, sans-serif);
 }
 
 .flex {
@@ -24,10 +39,10 @@ body {
 }
 
 .header {
-  font-size: 4em;
+  font-size: var(--main-font-size);
   text-align: center;
-  background-color: #89cff0;
-  color: #0072bb;
+  background-color: var(--secondary);
+  color: white;
   padding: .2em;
 }
 
@@ -37,9 +52,9 @@ body {
 
 .grid {
   background-color: white;
-  width: 35em;
-  height: 35em;
-  border: 2.5em solid red;
+  width: 35rem;
+  height: 35rem;
+  border: 2.5em solid var(--primary);
   border-radius: 1em;
   align-self: center;
 }
@@ -53,21 +68,24 @@ body {
 }
 
 button{
-  font-size: 3em;
-  background-color: blue;
+  font-size: 3rem;
+  background-color: var(--btn-color);
   border-radius: .5em;
   color: white;
   border-style: none;
   padding: .2em; 
+  font-family: var(--main-font-family, sans-serif);
 }
 
 input[type="range"]{
   height: 100%;
   appearance: slider-vertical;
+  cursor: pointer;
 }
 
 label {
-  font-size: 2em;
+  font-size: 1.8rem;
+  color: black;
 }
 
 
@@ -81,4 +99,14 @@ a:hover {
 
 a:visited{
   color:inherit;
+}
+
+footer {
+  color: black; 
+  text-align: center;
+  font-size: var(--main-font-size);
+}
+
+.selection {
+  width: 8vw;
 }
