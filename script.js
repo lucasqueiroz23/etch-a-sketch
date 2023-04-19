@@ -60,7 +60,7 @@ document.querySelector('input').addEventListener('input', updateGridSizeLabel);
 document.querySelector('input').addEventListener('mouseup', changeGridSize);
 document.querySelector('button').addEventListener('click', clearGrid);
 
-createGrid(16);
+createGrid(60);
 
 function createCopyRight(){
   const footer = document.createElement('footer');
@@ -76,3 +76,25 @@ function createCopyRight(){
 }
 
 createCopyRight();
+
+const title = document.getElementById('title');
+let isTitleAnimated = false;
+
+function animateTitle() {
+  if (!isTitleAnimated) {
+    isTitleAnimated = true;
+    const text = "QUE CACHORRO ESTRANHO";
+    let index = 0;
+    title.textContent = "";
+    const intervalId = setInterval(() => {
+      if (index >= text.length) {
+        clearInterval(intervalId);
+      } else {
+        title.textContent += text[index];
+        index++;
+      }
+    }, 150);
+  }
+}
+
+title.addEventListener('click', animateTitle);

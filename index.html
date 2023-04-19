@@ -2,21 +2,21 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Etch-A-Sketch</title>
+  <title>Rascunho</title>
   <link rel="stylesheet" href="./styles.css">
   <script src="./script.js" defer></script>
 </head>
 <body class="flex column gap space-between">
   <div class="header">
-    <header>Etch-A-Sketch</header>
+    <header id="title">Rascunho</header>
   </div>
   <main class="flex align-center space-between">
     <div class="flex column selection">
-      <label class="align-center" for="grid-size">16x16</label>
-      <input type="range" id="grid-size" value="16" min="16" max="100" step="1">
+      <label class="align-center" for="grid-size">60x60</label>
+      <input type="range" id="grid-size" value="60" min="10" max="100" step="1">
     </div>
     <div class="flex column gap">
-      <button class="align-center animate">CLEAR DRAWING</button>
+      <button class="align-center animate">LIMPAR RASCUNHO</button>
       <div class="grid flex column"></div>
     </div>
   </main>
